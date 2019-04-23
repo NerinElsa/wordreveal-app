@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="view1/view1.css">
+
+<div class="flex-container">
+    <div class="gametitle"><h1>Word Reveal Game</h1></div>
+
+    <div>Try guessing this word </div>
+    <div class="worddiv">
+        <p id="word">{{displayWord}}</p>
+    </div>
+
+    <div class="userinput">
+            <div class="usertext"><input type ="text" name = "guess" ng-model ="input.letter"></div>
+            <div class="submitbutton"><button ng-click ="letterChosen()">Submit</button></div>
+    </div>
+
+    <div class="gameboard">
+        <div><h3>Guesses Left : {{guesses}}</h3></div>
+        <div><h3>Your Incorrect guesses : <span ng-repeat ="letter in incorrectLettersChosen">{{letter}}</span></h3></div>
+        <div><h3>Your correct guesses : <span ng-repeat ="letter in correctLettersChosen">{{letter}}</span></h3></div>
+    </div>
+    
+    <div >
+        <div ><button ng-click ="gameReload()" class="newgamebutton">New Game</button></div>
+    </div>
+
+</div>
+<p>This is the partial for view 1.</p>

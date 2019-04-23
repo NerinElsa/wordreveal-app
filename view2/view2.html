@@ -1,0 +1,14 @@
+ <!--The 'ng-init' will give an initial value for any ng directive -->
+ <div ng-init='name = "Josephine"'>
+    <h2>Dynamic Binding</h2>
+    Enter Your Name: <input type="text" ng-model="name"  placeholder= "Type your name"/> <br />
+    <!--When ng-bind is used for a label that becomes the value of the label given below-->
+    <p>Hello, <label ng-bind="name"></label>! This is how we bind data using 'ng-bind' with Angular JS.</p><!--One way to dynamically bind data using 'ng-bind'--> 
+    <p >Hello, {{name}}! This is how we bind data using 'Moustasche Syntax' with Angular JS </p> <!--Another way to dynamically bind data-->  
+  </div>
+
+<p>This is the partial for view 2.</p>
+<p>
+  Showing of 'interpolate' filter:
+  {{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
